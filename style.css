@@ -13,6 +13,7 @@ font-family: 'Nunito', sans-serif; */
 
 }
 
+
 *{
     font-family: 'Nunito',Sans-serief;
     margin: 0;padding: 0;
@@ -29,7 +30,7 @@ font-family: 'Nunito', sans-serif; */
 }
 
 ::-webkit-scrollbar{
-    height: 0.rem;
+    height: 0.2rem;
     width: 1rem;
 }
 ::-webkit-scrollbar-track{
@@ -40,6 +41,7 @@ font-family: 'Nunito', sans-serif; */
 }
 
 html{
+    width: 100%;
     font-size: 1rem;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -115,7 +117,7 @@ section{
 .home-bg .home .content h3{
     font-size: 4rem;
     color: var(--black);
-    font-family: 'Merienda', cursive;
+    font-family: 'Merienda';
 }
 
 .home-bg .home .content p{
@@ -125,29 +127,211 @@ section{
     line-height: 2rem;
 
 }
-.home-bg .home .content  .btn{
+  .btn{
+    display: inline-block;
+    margin-top: 1rem;
     background-color: var(--main-color);
     padding: 0.5rem;
     color: var(--white);
     border-radius: 3px;
 }
 
-/* home page begin */
+    .btn:hover{
+    background-color: var(--black);
+
+    }
+/* home page end */
+
+/* About page begin */
+   .about{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap:2rem;
+
+   }
+
+   .about .image{
+        flex:1 1 20rem;
+   }
+
+   .about .image img{
+        width: 100%;
+   }
+
+   .about .content{
+        flex:1 1 20rem;
+   }    
+    .about .content h3{
+        color: var(--black);
+        text-transform: capitalize;
+        font-size: 3rem;
+        font-family: 'Merienda';
+    }
+
+    .about .content p{
+        color: var(--light-color);
+        line-height: 2;
+        padding: 1rem 0;
+        text-align: justify;
+    }
+/* About page end */
+
+/* Facility page begin */
+.facility .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.heading img{
+    height: 3rem;
+}
+
+.heading h3{
+    font-size: 3.5rem;
+    color: var(--black);
+    font-family: 'Merienda', cursive;
+}
 
 
 
+.facility .box-container .box{
+    text-align: center;
+}
+
+.facility .box-container .box img{
+    height: 8rem;
+    margin-bottom: 0.5rem;
+}
+
+.facility .box-container .box h3{
+    font-size: 1.5rem;
+    color: var(--black);
+    display:flex;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    font-family: 'Merienda', cursive;
+}
+
+.facility .box-container .box p{
+    
+    line-height: 1.5;
+    font-size: 1rem;
+    color: var(--light-color);
+}
+
+/* Facility page end */
+
+/* Menu page start */
+.menu-sec .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(18rem,1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.menu-sec .box-container .box img{
+    height:100%;
+    width: 70%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.menu-sec .box-container .box{
+    text-align: center;
+}
+
+
+.menu-sec .box-container .box h3{
+    color:var(--black)
+}
+/* Menu page end */
+
+
+.gallery .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.gallery .box-container img{
+    height: 100%; width: 100%;
+    object-fit: cover;
+    border-radius:0 5px;
+}
+
+.team .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.team .box-container .box{
+    text-align: center;
+}
+
+.team .box-container .box img{
+    height: 100%; width: 100%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border-radius:0  5px;
+}
+
+.team .box-container .box h3{
+    color:var(--black)
+}
 
 
 
+.contact .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
 
+.contact .row .images{
+    flex: 1 1 30rem;
+}
 
+.contact .row .images img{
+   
+    width: 100%;
+}
 
+.contact .row form{
+    flex: 1 1 30rem;
+    padding: 2rem;
+    border: var(--border);
+    text-align: center;
+} 
 
+form h3{
+    font-size: 2.5rem;
+    font-family: 'Merienda', cursive;
+    color: var(--light-color);
+}
 
-
-
-
-
+.contact .row form .box{
+    width: 90%;
+    padding: 1rem;
+    row-gap: 1rem;
+    font-size:inherit;
+    color: var(--black);
+    margin: 1rem 0;
+}
 
 
 
@@ -156,6 +340,10 @@ section{
 /* Media Queries */
 
 @media (max-width:991px){
+
+    .facility .box-container{
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    }
     
 }
 
@@ -171,10 +359,12 @@ section{
   
    .headers .flex .navbar{
         position: absolute;
-        top: 115%;
+        top: 100%;
         left: 0;
         right: 0;
+        background-color:#FAFAF9;
         border-bottom: 1px solid;
+        border-top:1px solid;
         clip-path: polygon(0 0,100% 0,100% 0,0 0);
    }
 
@@ -184,17 +374,18 @@ section{
    .navbar a{
         display: block;
         line-height: 2.5rem;
-    
    }
 
   
     /* media qry for  header and navigation section end */
 
-   
+
+    
+
     /* Medica qry for home page begin */
 
    .home-bg{
-        background-position: right;
+        background-position: left;
     }
 
 
@@ -203,13 +394,82 @@ section{
     }
     
    .home-bg .home .content h3{
-    font-size:2.5rem;
+        font-size:2.5rem;
 
     }
     /* Medica qry for home page end */
+
+
+
+    /* about section  */
+
+    .about .content h3{
+        font-size: 1.8rem;
+    }
+    /* about section  */
+
+    /* facility section start */
+
+    .facility .box-container{
+
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    }
+
+
+    /* facility section end */
+    /* menu section start */
+    .menu-sec .box-container{
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    }
+
+    .gallery .box-container{
+
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    }
+    .gallery .box-container img{
+        height:100%;
+        width: 90%;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .team .box-container{
+        grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    }
+    /* menu section end */
+
 }
 /* Tablet mode End */
 
 @media (max-width:450px){
+    .home-bg .home .content h3{
+        font-size:2rem;
+
+    }
     
+    
+    /* facility section beign */
+    .heading h3{
+        font-size: 3rem;
+    }
+
+    .facility .box-container{
+
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+    }
+
+    .facility .box-container .box p{
+        margin-right: 2rem;
+    }
+    /* facility section end */
+    
+    .menu-sec .box-container .box img{
+        height:60%;
+        width: 60%;
+        object-fit: cover;
+        margin-bottom: 0.5rem;
+    }
+
+   
 }
